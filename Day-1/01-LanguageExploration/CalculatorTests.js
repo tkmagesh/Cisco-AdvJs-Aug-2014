@@ -83,6 +83,15 @@ function init(){
 		//Assert
 		return expectedResult === result;
 	});
+
+	test("Should be able to add more than 2 numbers", function(){
+		var expectedResult = 100;
+
+		var result = add(10,20,30,40);
+
+		return result === expectedResult;
+	});
+
 	test("Should be able to add functions returning functions returning numbers in string format", function(){
 		//Arrange
 		var f1 = function(){ return function(){ return "10";}}, 
