@@ -43,22 +43,10 @@
 			<input type="range" name="" id="rangeTax" value="0" min="0" max="50" data-ng-model="calculator.tax">
 			<span id="spanTax">{{calculator.tax}}%</span>
 		</div>
-		<div><input type="button" value="Calculate" id="btnCalculate" data-ng-click="calculator.calculate()"></div>
+		<div><input type="button" value="Calculate" data-ng-disabled="(calculator.basic === 0 || calculator.hra === 0 || calculator.da === 0)" id="btnCalculate" data-ng-click="calculator.calculate()"></div>
 		<div>
 			<div id="divResult">{{calculator.salary | currency}}</div>
 		</div>
-		<hr>
-			<div><label for="txtBasic">Basic :</label><input type="number" data-ng-model="calculator.basic" name="" id="txtBasic"></div>
-		<div><label for="txtHra">HRA :</label><input data-ng-model="calculator.hra" type="number" name="" id="txtHra"></div>
-		<div><label for="txtDa">DA :</label><input type="number" name="" id="txtDa" data-ng-model="calculator.da"></div>
-		<div>
-			<label for="rangeTax">Tax :</label>
-			<input type="range" name="" id="rangeTax" value="0" min="0" max="50" data-ng-model="calculator.tax">
-			<span id="spanTax">{{calculator.tax}}%</span>
-		</div>
-		<div><input type="button" value="Calculate" id="btnCalculate" data-ng-click="calculator.calculate()"></div>
-		<div>
-			<div id="divResult">{{calculator.salary | currency}}</div>
-		</div>
+
 </body>
 </html>
